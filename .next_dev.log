@@ -1,0 +1,123 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.147:3000
+- Environments: .env.local
+
+✓ Starting...
+Creating turbopack project { dir: '/Users/cornelius/CropMax/frontend', testMode: true }
+✓ Ready in 455ms
+ GET /fleet 200 in 1895ms (compile: 1658ms, render: 237ms)
+ GET /fleet 200 in 77ms (compile: 7ms, render: 70ms)
+ GET /fleet 200 in 36ms (compile: 2ms, render: 34ms)
+ GET /fleet 200 in 43ms (compile: 8ms, render: 35ms)
+ GET /fleet 200 in 34ms (compile: 6ms, render: 29ms)
+✓ Compiled in 0ms
+ GET /fleet 200 in 335ms (compile: 192ms, render: 143ms)
+ GET /fleet 200 in 84ms (compile: 6ms, render: 77ms)
+ GET /fleet 200 in 73ms (compile: 10ms, render: 64ms)
+ GET /fleet 200 in 143ms (compile: 22ms, render: 121ms)
+✓ Compiled in 80ms
+ GET /fleet 200 in 163ms (compile: 45ms, render: 118ms)
+✓ Compiled in 98ms
+ GET /fleet 200 in 170ms (compile: 53ms, render: 118ms)
+ GET /fleet 200 in 81ms (compile: 8ms, render: 72ms)
+ GET /fleet 200 in 40ms (compile: 6ms, render: 34ms)
+✓ Compiled in 100ms
+ GET /portal/command 200 in 264ms (compile: 252ms, render: 12ms)
+ GET /fleet 200 in 42ms (compile: 31ms, render: 11ms)
+ GET /portal/command 200 in 20ms (compile: 5ms, render: 15ms)
+ GET /portal/dealer 200 in 169ms (compile: 160ms, render: 9ms)
+ GET /portal/command 200 in 17ms (compile: 4ms, render: 14ms)
+ GET /portal/destination 200 in 180ms (compile: 170ms, render: 10ms)
+ GET /portal/command 200 in 18ms (compile: 4ms, render: 14ms)
+ GET /portal/destination 200 in 17ms (compile: 4ms, render: 13ms)
+ GET /portal/dealer 200 in 18ms (compile: 3ms, render: 14ms)
+ GET /portal/command 200 in 13ms (compile: 4ms, render: 9ms)
+✓ Compiled in 49ms
+✓ Compiled in 82ms
+✓ Compiled in 90ms
+✓ Compiled in 77ms
+✓ Compiled in 38ms
+✓ Compiled in 47ms
+✓ Compiled in 30ms
+✓ Compiled in 32ms
+✓ Compiled in 26ms
+ GET /portal/command 200 in 118ms (compile: 42ms, render: 75ms)
+ GET /portal/command 200 in 45ms (compile: 6ms, render: 39ms)
+ GET /portal/command 200 in 54ms (compile: 5ms, render: 49ms)
+ GET /portal/dealer 200 in 131ms (compile: 52ms, render: 79ms)
+ GET /portal/destination 200 in 120ms (compile: 44ms, render: 77ms)
+✓ Compiled in 44ms
+✓ Compiled in 45ms
+✓ Compiled in 29ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 24ms
+ GET /portal/command 200 in 125ms (compile: 40ms, render: 85ms)
+ GET /portal/command 200 in 54ms (compile: 12ms, render: 42ms)
+ GET /portal/command 200 in 43ms (compile: 5ms, render: 37ms)
+ GET /portal/dealer 200 in 127ms (compile: 45ms, render: 82ms)
+ GET /portal/dealer 200 in 55ms (compile: 7ms, render: 48ms)
+ GET /portal/command 200 in 26ms (compile: 10ms, render: 16ms)
+ GET /portal/command 200 in 39ms (compile: 5ms, render: 34ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 123ms
+ GET /portal/destination 200 in 175ms (compile: 68ms, render: 107ms)
+ GET /portal/command 200 in 93ms (compile: 28ms, render: 66ms)
+ GET /portal/command 200 in 67ms (compile: 18ms, render: 48ms)
+ GET /portal/command 200 in 42ms (compile: 6ms, render: 36ms)
+✓ Compiled in 112ms
+✓ Compiled in 60ms
+ GET /portal/command 200 in 125ms (compile: 47ms, render: 79ms)
+ GET /portal/command 200 in 47ms (compile: 5ms, render: 41ms)
+✓ Compiled in 150ms
+✓ Compiled in 70ms
+ GET /portal/command 200 in 102ms (compile: 34ms, render: 68ms)
+ GET /fleet 200 in 66ms (compile: 46ms, render: 20ms)
+ GET /map 200 in 2.3s (compile: 2.3s, render: 40ms)
+ GET /map 200 in 30ms (compile: 7ms, render: 23ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 1862ms (compile: 296ms, render: 1566ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 2.3s (compile: 280ms, render: 2.0s)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 9ms (compile: 3ms, render: 6ms)
+ GET /fleet 200 in 38ms (compile: 15ms, render: 23ms)
+ GET /portal/command 200 in 19ms (compile: 5ms, render: 14ms)
+ GET /portal/dealer 200 in 70ms (compile: 48ms, render: 22ms)
+ GET /portal/destination 200 in 24ms (compile: 7ms, render: 17ms)
+ GET /fleet 200 in 23ms (compile: 7ms, render: 16ms)
+ GET /portal/command 200 in 23ms (compile: 5ms, render: 17ms)
+ GET /portal/dealer 200 in 20ms (compile: 4ms, render: 16ms)
+ GET /portal/command 200 in 15ms (compile: 3ms, render: 12ms)
+ GET /portal/dealer 200 in 20ms (compile: 4ms, render: 16ms)
+ GET /portal/command 200 in 20ms (compile: 5ms, render: 15ms)
+ GET /portal/dealer 200 in 19ms (compile: 3ms, render: 16ms)
+ GET /portal/command 200 in 19ms (compile: 3ms, render: 16ms)
+ GET /portal/dealer 200 in 17ms (compile: 4ms, render: 14ms)
+ GET /map 200 in 19ms (compile: 4ms, render: 16ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 1563ms (compile: 3ms, render: 1560ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 1570ms (compile: 17ms, render: 1554ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 12ms (compile: 4ms, render: 8ms)
+✓ Compiled in 181ms
+✓ Compiled in 245ms
+ GET /map 200 in 591ms (compile: 58ms, render: 533ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 1515ms (compile: 3ms, render: 1513ms)
+ GET /map 200 in 137ms (compile: 9ms, render: 129ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 1555ms (compile: 6ms, render: 1549ms)
+ GET /buyers 200 in 387ms (compile: 359ms, render: 27ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 10ms (compile: 4ms, render: 6ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 4ms (compile: 819µs, render: 3ms)
+ GET /buyers 200 in 58ms (compile: 4ms, render: 54ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 10ms (compile: 1128µs, render: 9ms)
+ GET /fleet 200 in 49ms (compile: 37ms, render: 12ms)
+ GET /portal/command 200 in 51ms (compile: 36ms, render: 15ms)
+ GET /buyers 200 in 16ms (compile: 4ms, render: 12ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 9ms (compile: 3ms, render: 5ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 7ms (compile: 1568µs, render: 5ms)
+ GET /admin 200 in 210ms (compile: 201ms, render: 9ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 10ms (compile: 4ms, render: 6ms)
+ GET /api/cropintel?limit=200&crop=Yellow+Corn 200 in 16ms (compile: 11ms, render: 5ms)
+ GET /fleet 200 in 19ms (compile: 5ms, render: 13ms)
+ GET /portal/command 200 in 17ms (compile: 4ms, render: 14ms)
+[?25h
