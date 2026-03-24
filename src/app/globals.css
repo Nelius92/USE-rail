@@ -65,58 +65,65 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Landing page grid background */
+/* Landing page gradient mask */
+.mask-gradient-to-t {
+  mask-image: linear-gradient(to top, transparent, black 60%);
+  -webkit-mask-image: linear-gradient(to top, transparent, black 60%);
+}
+
+.mask-gradient-to-b {
+  mask-image: linear-gradient(to bottom, transparent, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 100%);
+}
+
+.mask-radial-center {
+  mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+}
+
+/* Aurora Background */
+@keyframes aurora {
+  0% { transform: translate(0%, 0%) rotate(0deg) scale(1.2); }
+  33% { transform: translate(15%, -10%) rotate(45deg) scale(1.5); }
+  66% { transform: translate(-10%, 15%) rotate(90deg) scale(1.1); }
+  100% { transform: translate(0%, 0%) rotate(180deg) scale(1.2); }
+}
+
+.aurora-blob {
+  animation: aurora 30s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Premium Perspective Grid */
 @keyframes grid-shift {
-  0% { transform: perspective(1000px) rotateX(60deg) translateY(0); }
-  100% { transform: perspective(1000px) rotateX(60deg) translateY(50px); }
+  0% { transform: perspective(100vh) rotateX(65deg) translateY(0); }
+  100% { transform: perspective(100vh) rotateX(65deg) translateY(60px); }
 }
 
 .landing-grid {
   background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
   animation: grid-shift 8s linear infinite;
-}
-
-/* Card entrance stagger */
-@keyframes card-rise {
-  from { opacity: 0; transform: translateY(40px) scale(0.96); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-.card-entrance {
-  animation: card-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/* Hero text reveal */
-@keyframes text-reveal {
-  from { opacity: 0; transform: translateY(20px); filter: blur(10px); }
-  to { opacity: 1; transform: translateY(0); filter: blur(0); }
-}
-
-.text-reveal {
-  animation: text-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/* Floating orbs */
-@keyframes float-orb {
-  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
-  33% { transform: translate(30px, -20px) scale(1.1); opacity: 0.5; }
-  66% { transform: translate(-20px, 10px) scale(0.9); opacity: 0.2; }
+  mask-image: linear-gradient(to top, transparent 10%, black 90%);
+  -webkit-mask-image: linear-gradient(to top, transparent 10%, black 90%);
+  transform-origin: 50% 100%;
 }
 
 /* Subtle line scan */
-@keyframes line-scan {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+@keyframes line-scan-premium {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
 }
 
-.line-scan {
+.line-scan-premium {
   position: absolute;
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
-  animation: line-scan 6s linear infinite;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: line-scan-premium 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
