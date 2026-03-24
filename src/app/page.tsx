@@ -181,51 +181,66 @@ export default function Home() {
         </section>
 
         {/* ─── Premium Value Pillars ────────────────────────────── */}
-        <section className="w-full max-w-6xl mx-auto px-6 mb-40">
+        <section className="w-full max-w-6xl mx-auto px-6 mb-40 relative z-10">
           <motion.div 
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
           >
             {/* Pillar 1 */}
-            <motion.div variants={itemVariants} className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(16,185,129,0.15)] relative overflow-hidden group">
-                <motion.div animate={{ y: [0, -4, 0], x: [0, 4, 0] }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}>
-                  <TrendingUp className="w-7 h-7 text-emerald-400 group-hover:scale-110 transition-transform duration-300" />
-                </motion.div>
+            <motion.div variants={itemVariants} className="relative group rounded-3xl overflow-hidden p-[1px] shadow-[0_0_40px_rgba(16,185,129,0.03)] hover:shadow-[0_0_60px_rgba(16,185,129,0.1)] transition-shadow duration-700">
+              {/* Spinning Beam */}
+              <div className="absolute inset-[-100%] border-beam-emerald opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
+              {/* Static Border Fallback */}
+              <div className="absolute inset-0 border border-emerald-500/10 rounded-3xl" />
+              {/* Inner Card */}
+              <div className="relative bg-[#030303]/95 backdrop-blur-3xl px-8 py-12 rounded-[23px] h-full flex flex-col items-center">
+                <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(16,185,129,0.15)] relative overflow-hidden group-hover:shadow-[0_0_40px_rgba(16,185,129,0.3)] transition-shadow duration-500">
+                  <motion.div animate={{ y: [0, -4, 0], x: [0, 4, 0] }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}>
+                    <TrendingUp className="w-7 h-7 text-emerald-400 group-hover:scale-110 transition-transform duration-300" />
+                  </motion.div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Higher Margins</h3>
+                <p className="text-zinc-400 leading-relaxed text-sm">
+                  Our BNSF geospatial engine scans the entire national market in real-time — finding buyers that local elevators can't reach and margins they can't match.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Higher Margins</h3>
-              <p className="text-zinc-500 leading-relaxed text-sm">
-                Our BNSF geospatial engine scans the entire national market in real-time — finding buyers that local elevators can't reach and margins they can't match.
-              </p>
             </motion.div>
 
             {/* Pillar 2 */}
-            <motion.div variants={itemVariants} className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(56,189,248,0.15)] relative overflow-hidden group">
-                <motion.div animate={{ scale: [1, 1.15, 1], filter: ["brightness(1)", "brightness(1.5)", "brightness(1)"] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
-                  <Shield className="w-7 h-7 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
-                </motion.div>
+            <motion.div variants={itemVariants} className="relative group rounded-3xl overflow-hidden p-[1px] shadow-[0_0_40px_rgba(56,189,248,0.03)] hover:shadow-[0_0_60px_rgba(56,189,248,0.1)] transition-shadow duration-700">
+              <div className="absolute inset-[-100%] border-beam-cyan opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 border border-cyan-500/10 rounded-3xl" />
+              <div className="relative bg-[#030303]/95 backdrop-blur-3xl px-8 py-12 rounded-[23px] h-full flex flex-col items-center">
+                <div className="w-16 h-16 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(56,189,248,0.15)] relative overflow-hidden group-hover:shadow-[0_0_40px_rgba(56,189,248,0.3)] transition-shadow duration-500">
+                  <motion.div animate={{ scale: [1, 1.15, 1], filter: ["brightness(1)", "brightness(1.5)", "brightness(1)"] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
+                    <Shield className="w-7 h-7 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
+                  </motion.div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Zero Risk, Full Control</h3>
+                <p className="text-zinc-400 leading-relaxed text-sm">
+                  You keep ownership of your grain. We handle transloading, rail logistics, and last-mile delivery. Track every bushel from bin to buyer — in real time.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Zero Risk, Full Control</h3>
-              <p className="text-zinc-500 leading-relaxed text-sm">
-                You keep ownership of your grain. We handle transloading, rail logistics, and last-mile delivery. Track every bushel from bin to buyer — in real time.
-              </p>
             </motion.div>
 
             {/* Pillar 3 */}
-            <motion.div variants={itemVariants} className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(245,158,11,0.15)] relative overflow-hidden group">
-                <motion.div animate={{ rotate: [-10, 10, -10], scale: [1, 1.1, 1] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}>
-                  <Zap className="w-7 h-7 text-amber-400 group-hover:scale-110 transition-transform duration-300" />
-                </motion.div>
+            <motion.div variants={itemVariants} className="relative group rounded-3xl overflow-hidden p-[1px] shadow-[0_0_40px_rgba(245,158,11,0.03)] hover:shadow-[0_0_60px_rgba(245,158,11,0.1)] transition-shadow duration-700">
+              <div className="absolute inset-[-100%] border-beam-amber opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 border border-amber-500/10 rounded-3xl" />
+              <div className="relative bg-[#030303]/95 backdrop-blur-3xl px-8 py-12 rounded-[23px] h-full flex flex-col items-center">
+                <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(245,158,11,0.15)] relative overflow-hidden group-hover:shadow-[0_0_40px_rgba(245,158,11,0.3)] transition-shadow duration-500">
+                  <motion.div animate={{ rotate: [-10, 10, -10], scale: [1, 1.1, 1] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}>
+                    <Zap className="w-7 h-7 text-amber-400 group-hover:scale-110 transition-transform duration-300" />
+                  </motion.div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Turn Rail Into Revenue</h3>
+                <p className="text-zinc-400 leading-relaxed text-sm">
+                  Most farmers live next to rail they'll never use. USE rail changes that. Your proximity to Campbell's BNSF line is an untapped asset worth thousands per season.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Turn Rail Into Revenue</h3>
-              <p className="text-zinc-500 leading-relaxed text-sm">
-                Most farmers live next to rail they'll never use. USE rail changes that. Your proximity to Campbell's BNSF line is an untapped asset worth thousands per season.
-              </p>
             </motion.div>
           </motion.div>
         </section>
