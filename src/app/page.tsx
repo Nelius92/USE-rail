@@ -157,6 +157,56 @@ export default function Home() {
           </motion.div>
         </section>
 
+        {/* ─── Premium Value Pillars ────────────────────────────── */}
+        <section className="w-full max-w-6xl mx-auto px-6 mb-40">
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={containerVariants}
+            className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
+          >
+            {/* Pillar 1 */}
+            <motion.div variants={itemVariants} className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(16,185,129,0.15)] relative overflow-hidden group">
+                <motion.div animate={{ y: [0, -4, 0], x: [0, 4, 0] }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}>
+                  <TrendingUp className="w-7 h-7 text-emerald-400 group-hover:scale-110 transition-transform duration-300" />
+                </motion.div>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Higher Margins</h3>
+              <p className="text-zinc-500 leading-relaxed text-sm">
+                Our BNSF geospatial engine scans the entire national market in real-time — finding buyers that local elevators can't reach and margins they can't match.
+              </p>
+            </motion.div>
+
+            {/* Pillar 2 */}
+            <motion.div variants={itemVariants} className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(56,189,248,0.15)] relative overflow-hidden group">
+                <motion.div animate={{ scale: [1, 1.15, 1], filter: ["brightness(1)", "brightness(1.5)", "brightness(1)"] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
+                  <Shield className="w-7 h-7 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
+                </motion.div>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Zero Risk, Full Control</h3>
+              <p className="text-zinc-500 leading-relaxed text-sm">
+                You keep ownership of your grain. We handle transloading, rail logistics, and last-mile delivery. Track every bushel from bin to buyer — in real time.
+              </p>
+            </motion.div>
+
+            {/* Pillar 3 */}
+            <motion.div variants={itemVariants} className="flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(245,158,11,0.15)] relative overflow-hidden group">
+                <motion.div animate={{ rotate: [-10, 10, -10], scale: [1, 1.1, 1] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}>
+                  <Zap className="w-7 h-7 text-amber-400 group-hover:scale-110 transition-transform duration-300" />
+                </motion.div>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Turn Rail Into Revenue</h3>
+              <p className="text-zinc-500 leading-relaxed text-sm">
+                Most farmers live next to rail they'll never use. USE rail changes that. Your proximity to Campbell's BNSF line is an untapped asset worth thousands per season.
+              </p>
+            </motion.div>
+          </motion.div>
+        </section>
+
         {/* ─── Portal Cards (Interactive Spotlight) ─────────────── */}
         <section className="w-full max-w-6xl mx-auto px-6 mb-40">
           <motion.div 
