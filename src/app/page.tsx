@@ -95,6 +95,26 @@ export default function Home() {
         {/* Dynamic scanning line */}
         <div className="line-scan-premium" />
 
+        {/* ─── Modern Rail Light Trails ─────────────────────────── */}
+        <div className="absolute top-[30%] left-0 right-0 h-[50vh] opacity-60 pointer-events-none" style={{ perspective: '1200px' }}>
+          <div className="relative w-full h-full" style={{ transform: 'rotateX(70deg)', transformStyle: 'preserve-3d' }}>
+            {/* Track 1 (Cyan) */}
+            <div className="absolute top-[20%] left-[-20%] right-[-20%] h-[1px] bg-white/5 shadow-[0_0_20px_rgba(56,189,248,0.3)]">
+              <div className="absolute top-[0px] left-0 w-[40vw] h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-rail-dash-1 shadow-[0_0_15px_rgba(56,189,248,1)]" />
+            </div>
+            
+            {/* Track 2 (Amber) */}
+            <div className="absolute top-[50%] left-[-20%] right-[-20%] h-[1px] bg-white/5 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
+              <div className="absolute top-[0px] left-0 w-[60vw] h-[3px] bg-gradient-to-r from-transparent via-amber-400 to-transparent animate-rail-dash-2 shadow-[0_0_15px_rgba(245,158,11,1)]" />
+            </div>
+            
+            {/* Track 3 (Emerald) */}
+            <div className="absolute top-[80%] left-[-20%] right-[-20%] h-[1px] bg-white/5 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+              <div className="absolute top-[0px] left-0 w-[30vw] h-[2px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent animate-rail-dash-3 shadow-[0_0_15px_rgba(16,185,129,1)]" />
+            </div>
+          </div>
+        </div>
+
         {/* Cinematic Aurora Blobs */}
         <div className="absolute top-0 left-0 right-0 h-[60vh] mask-gradient-to-b opacity-40">
           <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[120px] aurora-blob" style={{ animationDelay: '0s' }} />

@@ -127,3 +127,25 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
   animation: line-scan-premium 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
+
+/* Abstract Rail Light Trails */
+@keyframes rail-dash {
+  0% { transform: translateX(-20vw); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(120vw); opacity: 0; }
+}
+
+.animate-rail-dash-1 {
+  animation: rail-dash 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-rail-dash-2 {
+  animation: rail-dash 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 2s;
+}
+
+.animate-rail-dash-3 {
+  animation: rail-dash 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 1s;
+}
