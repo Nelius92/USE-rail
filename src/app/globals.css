@@ -64,3 +64,59 @@ body {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Landing page grid background */
+@keyframes grid-shift {
+  0% { transform: perspective(1000px) rotateX(60deg) translateY(0); }
+  100% { transform: perspective(1000px) rotateX(60deg) translateY(50px); }
+}
+
+.landing-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-shift 8s linear infinite;
+}
+
+/* Card entrance stagger */
+@keyframes card-rise {
+  from { opacity: 0; transform: translateY(40px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.card-entrance {
+  animation: card-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Hero text reveal */
+@keyframes text-reveal {
+  from { opacity: 0; transform: translateY(20px); filter: blur(10px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+.text-reveal {
+  animation: text-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Floating orbs */
+@keyframes float-orb {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+  33% { transform: translate(30px, -20px) scale(1.1); opacity: 0.5; }
+  66% { transform: translate(-20px, 10px) scale(0.9); opacity: 0.2; }
+}
+
+/* Subtle line scan */
+@keyframes line-scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.line-scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  animation: line-scan 6s linear infinite;
+}
