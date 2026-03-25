@@ -11,6 +11,7 @@ import {
     X, FileText, Loader2, CheckCircle2, ChevronRight,
     Shield, Truck, DollarSign,
 } from 'lucide-react';
+import { BackButton } from '@/components/BackButton';
 
 // BNSF hopper constants for live calculation
 const WEIGHT_PER_CAR = 223_400;
@@ -105,6 +106,7 @@ export default function BuyersPage() {
                 <div className="px-8 pt-8 pb-4 border-b border-white/[0.04]">
                     <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-3">
+                            <BackButton />
                             <Users className="w-5 h-5 text-cyan-500" />
                             <h1 className="text-zinc-100 text-lg tracking-[0.15em] uppercase">
                                 National Buyer CRM

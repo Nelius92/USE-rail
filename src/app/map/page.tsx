@@ -14,6 +14,7 @@ import {
     ArrowRight, DollarSign, Truck, Clock, Info,
     AlertTriangle, CheckCircle2
 } from 'lucide-react';
+import { BackButton } from '@/components/BackButton';
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || '';
 
@@ -259,7 +260,8 @@ function ArbitrageMapContent() {
 
                 {/* Header */}
                 <div className="px-6 pt-6 pb-4 border-b border-white/5">
-                    <div className="flex items-center gap-2.5 mb-1">
+                    <div className="flex items-center gap-2.5 mb-1 w-full flex-wrap">
+                        <BackButton />
                         <Crosshair className="w-4 h-4 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                         <h2 className="text-white text-sm tracking-[0.2em] font-medium uppercase font-sans">
                             Arbitrage Command

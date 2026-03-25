@@ -15,6 +15,7 @@ import {
     getTransloadOrders, updateTransloadOrderStatus,
     updateTransloadOrder, seedDemoTransloadOrders, addOrderNote
 } from '@/lib/api';
+import { BackButton } from '@/components/BackButton';
 
 const STATUS_COLORS: Record<string, string> = {
     PENDING: 'text-amber-400 bg-amber-950/40 border-amber-500/30',
@@ -396,6 +397,7 @@ export default function CommandCenter() {
             <header className="border-b border-white/5 bg-black/80 backdrop-blur-sm sticky top-0 z-40">
                 <div className="max-w-[1600px] mx-auto px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
+                        <BackButton />
                         <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-emerald-500/10 border border-cyan-500/20 flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.15)]">
                             <Building2 className="w-5 h-5 text-cyan-400" />
                         </div>

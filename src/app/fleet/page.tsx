@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import GlobalNav from '@/components/GlobalNav';
 import { fetchFleet, Railcar } from '@/lib/api';
 import { TrainTrack, Search, Activity, CheckCircle, ShieldAlert } from 'lucide-react';
+import { BackButton } from '@/components/BackButton';
 import RailcarModal from '@/components/RailcarModal';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
@@ -151,8 +152,10 @@ export default function FleetCenter() {
                 
                 {/* 3-WAY HEADER */}
                 <header className="px-8 py-6 border-b border-white/5 flex items-end justify-between shrink-0 bg-black/50 backdrop-blur-md z-40 relative">
-                    <div>
-                        <h1 className="text-xl font-sans tracking-[0.15em] text-zinc-100 flex items-center gap-3 uppercase mb-2">
+                    <div className="flex items-center gap-4">
+                        <BackButton />
+                        <div>
+                            <h1 className="text-xl font-sans tracking-[0.15em] text-zinc-100 flex items-center gap-3 uppercase mb-2">
                             <TrainTrack className="w-5 h-5 text-cyan-500" />
                             Dispatch Fleet Command
                         </h1>
@@ -162,6 +165,7 @@ export default function FleetCenter() {
                             <span className="text-cyan-500/80">CMD CENTER</span>
                             <span className="text-rose-500/80">BUYER (DESTINATION)</span>
                         </div>
+                    </div>
                     </div>
                     
                     {/* Search Bar */}

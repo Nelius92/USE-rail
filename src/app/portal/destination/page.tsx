@@ -12,6 +12,7 @@ import {
     getTransloadOrders, getTransloadOrderById,
     updateTransloadOrderStatus, seedDemoTransloadOrders, addOrderNote
 } from '@/lib/api';
+import { BackButton } from '@/components/BackButton';
 
 const STATUS_COLORS: Record<string, string> = {
     PENDING: 'text-amber-400 border-amber-500/30',
@@ -137,6 +138,7 @@ export default function DestinationPortal() {
     if (!authenticated) {
         return (
             <div className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
+                <div className="absolute top-4 left-6 z-50"><BackButton /></div>
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-950/20 via-black to-black" />
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent" />
@@ -182,6 +184,7 @@ export default function DestinationPortal() {
             <header className="border-b border-white/5 bg-black/80 backdrop-blur-sm sticky top-0 z-40">
                 <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
+                        <BackButton />
                         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500/20 to-teal-500/10 border border-emerald-500/20 flex items-center justify-center">
                             <MapPin className="w-4 h-4 text-emerald-400" />
                         </div>

@@ -13,6 +13,7 @@ import {
     seedDemoTransloadOrders, addOrderNote,
     PRODUCT_CATALOG, getProductInfo, ProductInfo
 } from '@/lib/api';
+import { BackButton } from '@/components/BackButton';
 
 const STATUS_COLORS: Record<string, string> = {
     PENDING: 'text-amber-400 bg-amber-950/40 border-amber-500/30',
@@ -251,6 +252,7 @@ export default function DealerPortal() {
     if (!authenticated) {
         return (
             <div className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
+                <div className="absolute top-4 left-6 z-50"><BackButton /></div>
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-950/20 via-black to-black" />
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
@@ -310,6 +312,7 @@ export default function DealerPortal() {
             <header className="border-b border-white/5 bg-black/80 backdrop-blur-sm sticky top-0 z-40">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-4">
+                        <BackButton />
                         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/20 flex items-center justify-center">
                             <Package className="w-4 h-4 text-amber-400" />
                         </div>
